@@ -1,0 +1,22 @@
+# dotenv environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Fresh build directory
+_fresh/
+build/
+
+# npm dependencies
+node_modules/
+
+# Prisma files
+/prisma/generated
+
+# Development helpers
+.vscode
+
+# Git files
+.git
