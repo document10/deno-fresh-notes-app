@@ -7,11 +7,13 @@ import * as $_500 from "./routes/_500.tsx";
 import * as $_app from "./routes/_app.tsx";
 import * as $api_notes_id_ from "./routes/api/notes/[id].ts";
 import * as $api_notes_index from "./routes/api/notes/index.ts";
+import * as $api_save_id_ from "./routes/api/save/[id].ts";
+import * as $api_save_index from "./routes/api/save/index.ts";
 import * as $index from "./routes/index.tsx";
 import * as $view_id_ from "./routes/view/[id].tsx";
 import * as $AllNotes from "./islands/AllNotes.tsx";
-import * as $NewNote from "./islands/NewNote.tsx";
 import * as $NoteShow from "./islands/NoteShow.tsx";
+import * as $TopControls from "./islands/TopControls.tsx";
 import type { Manifest } from "$fresh/server.ts";
 
 const manifest = {
@@ -21,13 +23,15 @@ const manifest = {
     "./routes/_app.tsx": $_app,
     "./routes/api/notes/[id].ts": $api_notes_id_,
     "./routes/api/notes/index.ts": $api_notes_index,
+    "./routes/api/save/[id].ts": $api_save_id_,
+    "./routes/api/save/index.ts": $api_save_index,
     "./routes/index.tsx": $index,
     "./routes/view/[id].tsx": $view_id_,
   },
   islands: {
     "./islands/AllNotes.tsx": $AllNotes,
-    "./islands/NewNote.tsx": $NewNote,
     "./islands/NoteShow.tsx": $NoteShow,
+    "./islands/TopControls.tsx": $TopControls,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

@@ -1,5 +1,5 @@
 import AllNotes from "../islands/AllNotes.tsx";
-import NewNote from "../islands/NewNote.tsx";
+import TopControls from "../islands/TopControls.tsx";
 export default async function Home() {
   const allnotes = await AllNotes();
   return (
@@ -7,7 +7,7 @@ export default async function Home() {
       <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
         <div>
           <h1 class="text-center text-gray-50 text-5xl">Deno Fresh Notes</h1>
-          <NewNote />
+          <TopControls />
           {allnotes}
         </div>
       </div>

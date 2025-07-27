@@ -26,12 +26,20 @@ export default function View(props: PageProps<Note[]>) {
     return (
       <div class="flex flex-col gap-3 md:p-3 items-center justify-items-center place-content-center min-h-screen">
         <NoteShow note={noteSignal} />
-        <a
-          class="text-lg text-center text-gray-50 bg-blue-500 rounded-xl p-2 transition-all duration-200 hover:bg-blue-600 hover:text-gray-100 hover:scale-105"
-          href="/"
-        >
-          Return home
-        </a>
+        <div class="flex flex-row gap-1 md:gap-3">
+          <a
+            class="text-lg text-center text-gray-50 bg-purple-500 rounded-xl p-2 transition-all duration-200 hover:bg-purple-600 hover:text-gray-100 hover:scale-105"
+            href={`/api/save/${note.id}`}
+          >
+            Download note
+          </a>
+          <a
+            class="text-lg text-center text-gray-50 bg-blue-500 rounded-xl p-2 transition-all duration-200 hover:bg-blue-600 hover:text-gray-100 hover:scale-105"
+            href="/"
+          >
+            Return home
+          </a>
+        </div>
       </div>
     );
   } else return Error404();

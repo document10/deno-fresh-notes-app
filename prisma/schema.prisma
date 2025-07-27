@@ -4,17 +4,19 @@ generator client {
   runtime  = "deno"
 }
 
-// Please update this section to reflect your database
-// MariaDB was used during development, but any db
-// supported by Prisma should work.
+// Please update this section to reflect your database.
+// MariaDB was used during development, but any database supported by Prisma should work.
+// See: https://www.prisma.io/docs/orm/reference/supported-databases
+// Please also update the .env file according to example.env
+
 datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model Note {
-  id Int @id @default(autoincrement())
-  title String
-  content String
+  id          Int      @id @default(autoincrement())
+  title       String
+  content     String
   lastUpdated DateTime
 }
