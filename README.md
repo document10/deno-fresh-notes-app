@@ -7,9 +7,16 @@ This is a notes app created using [Deno](https://deno.com/) and [Fresh](https://
 - Modern and responsive design using [TailwindCSS](https://tailwindcss.com/)
 - All written in [Typescript](https://www.typescriptlang.org/) for seamless development
 
+## Screenshots
+
+![Main Interface](/screenshots/main_ui.png)
+![Edit note](/screenshots/edit_ui.png)
+
 ## Installation
 
 1. Install dependencies
+
+[Make sure you have Deno installed and at its latest version.](https://docs.deno.com/runtime/getting_started/installation/)
 
 ```sh
 git clone https://github.com/document10/deno-fresh-notes-app
